@@ -1,0 +1,46 @@
+include ./layouts/main.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        script(src='https://kit.fontawesome.com/0f8125221d.js' crossorigin='anonymous')
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Enviado
+    body
+        style.
+            body{
+                 
+                 background-image: url("/iniciobg.jpg");
+                  background-position: center center;
+                
+                /* Background image doesn't tile */
+                background-repeat: no-repeat;
+                
+                /* Background image is fixed in the viewport so that it doesn't move when 
+                    the content's height is greater than the image's height */
+                background-attachment: fixed;
+                
+                /* This is what makes the background image rescale based
+                    on the container's size */
+                background-size: cover;
+                
+                /* Set a background color that will be displayed
+                    while the background image is loading */
+                background-color: #464646;
+            } 
+
+            .opacity{
+            
+            opacity:0.95;
+            
+            }
+        
+        div(class="jumbotron text-center opacity" )
+            h1(class="display-4" ) <i class="fas fa-smile-wink"></i> Holaaa! 
+            H1(class="display-5" align="center") Delivery Deli Healthy
+            H1(class="display-5" align="center") Cuida tu Salud 
+                i(class="far fa-heart")
+            p(class="lead")
+                
+    

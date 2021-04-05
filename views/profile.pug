@@ -1,0 +1,11 @@
+include ./layouts/main.pug
+
+
+
+div(class="card border-success mb-3 text-center")
+    div(class='card-header')
+        h3 <i class="far fa-address-card"></i> Perfil
+    div(class='card card-body')
+        h1 <i class="fas fa-user"></i> Usuario: #{user.nombre}
+        h1 <i class="fas fa-compass"></i> Dirección: #{user.direccion} 
+        h1 <i class="fas fa-money-check-alt"></i> Correo: #{user.email} 

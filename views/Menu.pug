@@ -1,0 +1,96 @@
+include ./layouts/main.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Deli Healthy
+        style.
+            .container {
+                position: relative;
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .container img {
+                margin:10px auto;
+                border-radius:5px;
+                //- border: 1px solid #999;
+                padding:13px;
+                width:320px;
+                height:320px;
+                background-size: 100% 100%;
+                background-repeat:no-repeat;
+                //- background:url(https://s1.eestatic.com/2015/02/10/cocinillas/Cocinillas_10009107_116018304_1024x1024.jpg);
+                background-size: cover;
+            }
+
+            .container .btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                //- background-color: #555;
+                //- color: white;
+                font-size: 16px;
+                padding: 12px 24px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                text-align: center;
+            }
+
+            //- .container .btn:hover {
+            //-     background-color: black;
+            //- }
+
+
+    body
+    div(class="loader")
+        H1(align="center") <i class="fas fa-book-open"></i> Menú
+            br
+            form(method="post")
+                
+                table(align='CENTER',border='5')
+                        tr
+                            td
+                                div(class='container')
+                                    img(src="/menu1.jpg" width="300" height="200")
+                                    
+                                    h4 Pimientos rellenos de quinoa
+                                    h5 $10.50
+                                button(type='submit' class="btn btn-outline-success" value='Ver Menu' name='menu1') Pedir
+                            td        
+                                div(class='container')
+                                    img(src="/menu2.jpg" width="300" height="200")
+                                    h4 Huevos revueltos
+                                    h5 $7.00
+                                button(type='submit' class="btn btn-outline-success" value='Ver Menu' name='menu2') Pedir
+                            td 
+                                div(class='container')
+                                    img(src="/menu3.jpg" width="300" height="200")
+                                    h4 Salmón a la plancha 
+                                    h5 $14.50     
+                                button(type='submit' class="btn btn-outline-success" value='Ver Menu' name='menu3') Pedir        
+                        tr
+                            td 
+                                div(class='container')
+                                    img( src="/menu4.jpg" width="300" height="200")
+                                    h4 Sushi vegetariano
+                                    h5 $10.80
+                                button(type='submit' class="btn btn-outline-success" value='Ver Menu' name='menu4') Pedir
+                            td 
+                                div(class='container')
+                                    img(src="/menu5.jpg" width="300" height="200")
+                                    h4 Pasta
+                                    h5 $9.00
+                                button(type='submit' class="btn btn-outline-success" value='Ver Menu' name='menu5') Pedir
+                            td 
+                                div(class='container')
+                                    img(src="/menu6.jpg" width="300" height="200")
+                                    h4 Pollo la plancha
+                                    h5 $8.90
+                                button(type='submit' class="btn btn-outline-success" value='Ver Menu' name='menu6') Pedir
+        //- a(href='/Bienvenido') Cambiar Direccion

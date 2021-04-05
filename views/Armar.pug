@@ -1,0 +1,66 @@
+include ./layouts/main.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Deli Healthy
+    body
+        H1(align="center") <i class="fas fa-drum-steelpan"></i> Armar combo
+        br
+        
+        form(method="post")
+            table(align='CENTER', class="table table-hover" WIDTH="123" HEIGHT="55" )
+                tr
+                    td(class="table-success")
+                        label(for='carbos') Carbohidratos
+                    td
+                        select(id='carbs' name='carbs' )
+                            option(value='arroz') Arroz
+                            option(value='pure') Puré
+                            option(value='papa') Papa Hervida
+                            option(value='pasta') Pasta
+                            option(value='quinoa') Quinoa
+                tr
+                    td(class="table-success")
+                        label(for='menes') Menestras
+                    td
+                        select(id='menes' name='menes')
+                            option(value='Arbejas') Arbejas
+                            option(value='Poroto') Poroto
+                            option(value='Lentejas') Lentejas
+                tr    
+                    td(class="table-success")
+                        label(for='prote') Proteínas
+                    td
+                        select(id='prote' name='prote')
+                            option(value='Carne de res') Carne de res
+                            option(value='Pollo a la plancha') Pollo a la plancha
+                            option(value='Pescado apanado') Pescado apanado
+                tr    
+                    td(class="table-success")
+                        label(for='grasa') Grasas
+                    td
+                        select(id='grasa' name='grasa')
+                            option(value='Aguacate') Aguacate
+                            option(value='Almendras') Almendras
+                            option(value='Nueces') Nueces
+                tr    
+                    td(class="table-success")
+                        label(for='jugo') Bebidas-248ml-1copa
+                    td
+                        select(id='jugo' name='jugo')
+                            option(value='Jugo de naranja Natural') Jugo de naranja Natural
+                            option(value='Jugo de Maracuya Natural ') Jugo de Maracuya Natural 
+                            option(value='Jugo de Mango Natural') Jugo de Mango Natural
+                tr    
+                    td(class="table-success")
+                        label(for='acom') Acompañamiento extra
+                    td
+                        select(id='acom' name='acom')
+                            option(value='Puré') Puré
+                            option(value='Pollo') Pollo
+                            option(value='Lentejas') Lentejas
+            button(type="submit" class="btn btn-primary btn-lg align center" value='Confirmar' name='confirmar') Confirmar
+a(href='/Bienvenido') Ir atrás

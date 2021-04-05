@@ -1,0 +1,50 @@
+include ./layouts/main.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Detalles
+    body
+        
+        br
+
+    div(class="jumbotron")
+        h1 Detalles del Pedido
+        BR
+        table(class="table table-hover")
+            thead(class="table-success")
+                th(scope="col") Principal
+                th(scope="col") Menestras
+                th(scope="col") Carnes
+                th(scope="col") Acompañamiento
+                th(scope="col") Jugos
+                th(scope="col") Calorías Totales
+                th(scope="col") Carbohidratos Totales
+                th(scope="col") Grasas Totales
+                th(scope="col") Proteinas Totales
+                th(scope="col") <i class="fas fa-compass"> </i> Dirección
+                th(scope="col") <i class="fas fa-money-check-alt">  </i>Método de Pago
+                th(scope="col") Precio
+                
+            tbody(class="table-active")
+                tr(scope="row")
+                    td #{a1}
+                    td #{a2}
+                    td #{a3}
+                    td #{a4}
+                    td #{a5}
+                    td #{x} cal
+                    td #{x1} 
+                    td #{x2}
+                    td #{x3}
+                    td #{user.direccion}
+                    td Visa
+                    td #{precio}
+                    
+        a(href='/Menu') Ir atrás
+
+    form(method="post")
+        button(type="submit" class="btn btn-primary btn-lg" value='Enviar Pedido' name='Enviar' ) Enviar Pedido
+            

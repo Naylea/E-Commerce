@@ -1,0 +1,39 @@
+include ./layouts/main.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Deli Healthy 
+        style.
+            body{
+
+                background-image: url("https://www.cocinayvino.com/wp-content/uploads/2016/09/47701658_l.jpg");
+            }
+       
+    body
+    div(class='row')
+        div(class='col-md-4 offset-md-4')
+            div(class='card mt-4 text-center')
+                div(class='card-header')
+                    h3 Registrarse
+                div(class='card-body')
+                    form(align='center' action='/signup' method='POST')
+                        div(class='form-group')
+                            label(for="nombre") Ingrese su Nombre :  
+                            input(name="nombre", type="text" placeholder='Nombre' class='form-control')
+                        br
+                        div(class='form-group')
+                            label(for="direccion") Ingrese su Direccion: 
+                            input(name="direccion", type="text" placeholder='Direccion' class='form-control')
+                        br
+                        div(class='form-group')
+                            label(for="email") Ingrese su correo :
+                            input(type='email' name='email' placeholder='Email' class='form-control')
+                        br
+                        div(class='form-group')
+                            label(for="nombre") Ingrese su contraseña : 
+                            input(type='password' name='password' placeholder='Password' class='form-control')
+                        br
+                        button(type='submit' class="btn btn-primary btn-block mt-4") Registrarse Aqui

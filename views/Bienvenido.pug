@@ -1,0 +1,35 @@
+include ./layouts/main.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Bienvenido 
+        style.
+            body{
+                background-size: cover;
+                background-image: url("/bienvenidobg.jpg");
+                opacity:80
+            }
+            .opacity{
+            
+            opacity:0.93; /* Opacidad 60% */
+            
+            }
+    body
+        div(class="jumbotron text-center opacity" )
+
+            h1(class="display-4") <i class="fas fa-house-user"></i> Bienvenido! 
+                a(id='nombre') #{user.nombre}
+            p(class="lead") Qué deseas ordenar el día de hoy?
+            hr(class="my-4")
+            
+            p(class="lead")
+                form(method="post")
+                    button(type='submit' class="btn btn-primary btn-lg" value='Ver Menu' name='menu') Ver menú 
+                    br
+                    img(src="https://media0.giphy.com/media/jTqnkqm3Ms3c99fNt0/giphy.gif" width="400" height="300")
+                    br
+                    //- br
+                    //- button(type='submit' class="btn btn-primary btn-lg" value='Ver Armar' name='armar' disabled) Armar combo

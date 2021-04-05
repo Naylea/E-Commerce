@@ -1,0 +1,43 @@
+include ./layouts/main.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Detalles
+    body
+        a(href='/Menu') Ir atrás
+        br
+
+    div(class="jumbotron")
+        h1 <i class="fas fa-receipt"></i> Detalles del Pedido
+        BR
+        table(class="table table-hover")
+            thead(class="table-success")
+                th(scope="col") Carbohidratos
+                th(scope="col") Menestras
+                th(scope="col") Proteínas
+                th(scope="col") Grasas
+                th(scope="col") Jugos
+                th(scope="col") Acompañamientos
+                th(scope="col") <i class="fas fa-compass"> </i> Dirección
+                th(scope="col") <i class="fas fa-money-check-alt"> </i> Método de Pago
+                th(scope="col") Calorías Totales
+            tbody(class="table-active")
+                each data in b
+                    if c < a
+                        tr(scope="row")
+                            td #{data.carbs}
+                            td #{data.menes}
+                            td #{data.prote}
+                            td #{data.grasa}
+                            td #{data.jugo}
+                            td #{data.acom}
+                            td #{user.direccion}
+                        -c=c+1
+                            
+
+    form(method="post")
+        button(type="submit" class="btn btn-primary btn-lg" value='Enviar Pedido' name='Enviar' ) Enviar Pedido
+            
