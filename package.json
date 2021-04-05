@@ -1,0 +1,40 @@
+{
+    "name": "proyecto_final",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "mongo:start": "docker run --rm -p=27017:27017 --env-file=./.env --name=dessoftix--proyf--mongo -d centos/mongodb-32-centos7",
+        "mongo:stop": "docker stop dessoftix--proyf--mongo",
+        "dev": "npm run mongo:start && nodemon source/app.js",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/2020-SEMI-TOPESP-II/laboratorio_5_guia.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/2020-SEMI-TOPESP-II/laboratorio_5_guia/issues"
+    },
+    "homepage": "https://github.com/2020-SEMI-TOPESP-II/laboratorio_5_guia#readme",
+    "dependencies": {
+        "bcrypt-nodejs": "0.0.3",
+        "body-parser": "^1.19.0",
+        "bootstrap": "^4.5.0",
+        "connect-flash": "^0.1.1",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-session": "^1.17.1",
+        "mongoose": "^5.9.25",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.4",
+        "passport": "^0.4.1",
+        "passport-local": "^1.0.0",
+        "pug": "^3.0.0",
+        "req-flash": "0.0.3",
+        "stripe": "^8.79.0"
+    }
+}
